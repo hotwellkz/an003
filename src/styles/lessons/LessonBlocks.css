@@ -1,0 +1,74 @@
+.lesson-blocks {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.block {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(var(--accent-light));
+}
+
+.block-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.block-content {
+  color: #e4e4e7;
+  line-height: 1.6;
+}
+
+.block.roles {
+  border-left: 4px solid rgb(var(--accent));
+}
+
+.block.skills {
+  border-left: 4px solid #4CAF50;
+}
+
+.block.examples {
+  border-left: 4px solid #2196F3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-blocks {
+    gap: 1rem;
+  }
+
+  .block {
+    padding: 1rem;
+  }
+
+  .block-header h3 {
+    font-size: 1.1rem;
+  }
+}

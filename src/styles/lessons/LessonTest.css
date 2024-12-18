@@ -1,0 +1,92 @@
+.lesson-test {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.lesson-test h3 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.question {
+  margin-bottom: 2rem;
+}
+
+.question p {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.option input {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: rgb(var(--accent));
+}
+
+.option span {
+  color: #e4e4e7;
+}
+
+.submit-test {
+  width: 100%;
+  padding: 1rem;
+  background: rgb(var(--accent));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.submit-test:hover {
+  background: rgb(var(--accent-light));
+  transform: translateY(-2px);
+}
+
+.submit-test:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.test-results {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(var(--accent), 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.test-results h4 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.test-results p {
+  color: #a1a1aa;
+}

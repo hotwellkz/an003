@@ -1,0 +1,183 @@
+.lesson-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.start-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  background: rgb(var(--accent));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.start-button:hover {
+  background: rgb(var(--accent-light));
+  transform: translateY(-2px);
+}
+
+.start-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.start-button.pulse {
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--accent), 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--accent), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--accent), 0);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.audio-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.audio-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.audio-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.audio-button.premium {
+  background: rgb(var(--accent));
+}
+
+.audio-button.premium:hover {
+  background: rgb(var(--accent-light));
+}
+
+.audio-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pause-button {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pause-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.content {
+  color: #e4e4e7;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  color: #e4e4e7;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content li:last-child {
+  margin-bottom: 0;
+}
+
+.lesson-footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.finish-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: rgb(var(--accent));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.finish-button:hover {
+  background: rgb(var(--accent-light));
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .lesson-content {
+    padding: 1rem;
+  }
+
+  .audio-controls {
+    flex-direction: column;
+  }
+
+  .audio-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

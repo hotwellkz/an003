@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LessonContent from '../../components/lessons/LessonContent';
+import LessonBlocks from '../../components/lessons/LessonBlocks';
+import LessonTest from '../../components/lessons/LessonTest';
+import LessonPrompts from '../../components/lessons/LessonPrompts';
+import { courseModules } from '../../data/courseProgram';
+
+const lesson = courseModules[0].lessons[0];
+const pageTitle = `Урок 1.1: ${lesson.title}`;
+const pageDescription = "Узнайте, кто такой бизнес-аналитик, основные роли и обязанности, ключевые навыки и инструменты, примеры задач.";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+>
+  <main class="lesson-page">
+    <div class="container">
+      <LessonContent
+        client:load
+        title={pageTitle}
+        topics={lesson.topics}
+        test={lesson.test}
+      />
+      <LessonBlocks client:load topics={lesson.topics} />
+      <LessonPrompts client:load lessonTitle={lesson.title} />
+      <LessonTest client:load />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .lesson-page {
+    padding: 120px 0 4rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(var(--accent-dark)) 0%, #1a1a1a 100%);
+  }
+
+  @media (max-width: 768px) {
+    .lesson-page {
+      padding: 100px 0 3rem;
+    }
+  }
+</style>
